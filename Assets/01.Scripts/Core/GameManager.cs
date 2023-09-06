@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
         get
         {
             if (_instance == null)
-                _instance = GameObject.Find("GameManager").GetComponent<GameManager>();
+                _instance = FindObjectOfType<GameManager>();
             return _instance;
         }
     }

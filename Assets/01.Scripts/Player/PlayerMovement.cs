@@ -58,6 +58,9 @@ public class PlayerMovement : MonoBehaviour
     
     private void OnDrawGizmos()
     {
+        if (Application.isEditor)
+            return;
+    
         Handles.color = Color.green;
         Gizmos.DrawRay(transform.position, Vector3.up * _playerController.PlayerData.RayLength);
         Gizmos.DrawRay(transform.position, Vector3.down * _playerController.PlayerData.RayLength);
