@@ -1906,7 +1906,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   State: 0
-  WhatIsObstacle:
-    serializedVersion: 2
-    m_Bits: 256
   PlayerData: {fileID: 11400000, guid: a625872cca1dffc419c7603a7a424a4e, type: 2}
