@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    public static InputManager _instance;
+    private static InputManager _instance;
     public static InputManager Instance
     {
         get
@@ -16,23 +16,66 @@ public class InputManager : MonoBehaviour
         }
     }
 
+    public event Action<PlayerDirectionState> SwipeInput; 
+
+    private float _swipeDistance;
     private Vector2 _startPos;
     private Vector2 _endPos;
 
+    private void Awake()
+    {
+        _swipeDistance = Screen.width * 0.5f;
+    }
+
     private void Update()
     {
+#if UNITY_EDITOR
+        KeyBoard();
+#elif UNITY_ANDROID
         Swipe();
+#endif
+    }
+
+    private void KeyBoard()
+    {
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
+        Vector2 dir = new Vector2(x, y);
+        DirectionCheck(dir);
     }
 
     private void Swipe()
     {
+        if (Input.touchCount <= 0)
+            return;
+        
         if (Input.GetTouch(0).phase == TouchPhase.Began)
         {
             _startPos = Input.GetTouch(0).position;
         }
         else if (Input.GetTouch(0).phase == TouchPhase.Ended)
         {
+            _endPos = Input.GetTouch(0).position;
             
+            if (Vector2.Distance(_startPos, _endPos) < _swipeDistance)
+                return;
+
+            Vector2 direction = (_startPos - _endPos).normalized;
+            direction.x = Mathf.Round(direction.x);
+            direction.y = Mathf.Round(direction.y);
+            DirectionCheck(direction * -1);
         }
+    }
+
+    private void DirectionCheck(Vector2 dir)
+    {
+        if (dir == Vector2.up)
+            SwipeInput?.Invoke(PlayerDirectionState.UP);
+        else if (dir == Vector2.down)
+            SwipeInput?.Invoke(PlayerDirectionState.DOWN);
+        else if (dir == Vector2.left)
+            SwipeInput?.Invoke(PlayerDirectionState.LEFT);
+        else if (dir == Vector2.right)
+            SwipeInput?.Invoke(PlayerDirectionState.RIGHT);
     }
 }

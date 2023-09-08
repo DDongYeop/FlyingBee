@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1335a46d6c122114cb39a0b57ab5ba66, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  MoveSpeed: 0.05
+  MoveSpeed: 0.025
   RayLength: 1
   WhatIsObstacle:
     serializedVersion: 2

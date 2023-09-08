@@ -15,17 +15,11 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _playerMovement = GetComponent<PlayerMovement>();
+        InputManager.Instance.SwipeInput += PlayerInput;
     }
 
-    private void Update()
+    private void PlayerInput(PlayerDirectionState dirState)
     {
-        if (Input.GetKeyDown(KeyCode.W))
-            _playerMovement.Movement(PlayerDirectionState.UP);
-        if (Input.GetKeyDown(KeyCode.A))
-            _playerMovement.Movement(PlayerDirectionState.LEFT);
-        if (Input.GetKeyDown(KeyCode.S))
-            _playerMovement.Movement(PlayerDirectionState.DOWN);
-        if (Input.GetKeyDown(KeyCode.D))
-            _playerMovement.Movement(PlayerDirectionState.RIGHT);
+        _playerMovement.Movement(dirState);
     }
 }

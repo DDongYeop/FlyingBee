@@ -28,9 +28,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (_instance == null)
-            Debug.LogError("Multiple GameManager is running");
-        _instance = this;
         _saveData.TryLoad();
     }
 
