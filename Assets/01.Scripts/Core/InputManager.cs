@@ -24,7 +24,7 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
-        _swipeDistance = Screen.width * 0.5f;
+        _swipeDistance = Screen.width * 0.3f;
     }
 
     private void Update()
