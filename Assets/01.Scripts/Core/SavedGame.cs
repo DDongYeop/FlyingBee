@@ -6,9 +6,6 @@ using UnityEngine;
 [Serializable]
 public class SavedGame
 {
-    [SerializeField] public int BestScore = 0;
-    [SerializeField] public int CurrentScore = 0;
-
     private const string _saveKey = "Save";
     private bool _loaded = false;
 

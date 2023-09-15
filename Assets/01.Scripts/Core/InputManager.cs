@@ -24,7 +24,7 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
-        _swipeDistance = Screen.width * 0.3f;
+        _swipeDistance = Screen.width * 0.1f;
     }
 
     private void Update()
@@ -57,18 +57,21 @@ public class InputManager : MonoBehaviour
         {
             _startPos = Input.GetTouch(0).position;
         }
-        else if (Input.GetTouch(0).phase == TouchPhase.Ended)
-        {
-            _endPos = Input.GetTouch(0).position;
-            
-            if (Vector2.Distance(_startPos, _endPos) < _swipeDistance)
-                return;
+        
+        _endPos = Input.GetTouch(0).position;
 
-            Vector2 direction = (_startPos - _endPos).normalized;
-            direction.x = Mathf.Round(direction.x);
-            direction.y = Mathf.Round(direction.y);
-            DirectionCheck(direction * -1);
-        }
+        if (_endPos.x - _startPos.x > _swipeDistance)
+            DirectionCheck(Vector2.right);
+        else if ( _startPos.x - _endPos.x > _swipeDistance)
+            DirectionCheck(Vector2.left);
+        else if (_endPos.y - _startPos.y > _swipeDistance)
+            DirectionCheck(Vector2.up);
+        else if ( _startPos.y - _endPos.y > _swipeDistance)
+            DirectionCheck(Vector2.down);
+        else
+            return;
+
+        _startPos = _endPos;
     }
 
     private void DirectionCheck(Vector2 dir)

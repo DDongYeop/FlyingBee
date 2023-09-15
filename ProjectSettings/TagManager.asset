@@ -47,6 +47,12 @@ TagManager:
   - name: Tiles
     uniqueID: 2752112491
     locked: 0
+  - name: Obstacle
+    uniqueID: 3439200117
+    locked: 0
+  - name: Enemy
+    uniqueID: 1562070383
+    locked: 0
   - name: Player
     uniqueID: 2815475473
     locked: 0

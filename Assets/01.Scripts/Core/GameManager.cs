@@ -35,20 +35,4 @@ public class GameManager : MonoBehaviour
     {
         _saveData.Save();
     }
-
-    public int BestScore
-    {
-        get => _saveData.BestScore;
-        set
-        {
-            if (_saveData.BestScore < value)
-                _saveData.BestScore = value;
-        }
-    }
-
-    public int CurrentScore
-    {
-        get => _saveData.CurrentScore;
-        set => _saveData.CurrentScore = value;
-    }
 }
