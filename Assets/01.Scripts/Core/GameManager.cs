@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         _saveData.TryLoad();
+        Application.targetFrameRate = -1;
     }
 
     private void OnDestroy()

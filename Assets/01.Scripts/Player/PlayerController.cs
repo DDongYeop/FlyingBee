@@ -12,10 +12,26 @@ public class PlayerController : MonoBehaviour
 
     private PlayerMovement _playerMovement;
 
+    private int _score = 0;
+    public int Score
+    {
+        get => _score;
+        set
+        {
+            _score = value;
+            _inGameUI.CorrectionScore(Score);
+        }
+    }
+
+    [Header("Other")] 
+    private InGameUI _inGameUI;
+
     private void Awake()
     {
         _playerMovement = GetComponent<PlayerMovement>();
         InputManager.Instance.SwipeInput += PlayerInput;
+
+        _inGameUI = FindObjectOfType<InGameUI>();
     }
 
     private void PlayerInput(PlayerDirectionState dirState)
