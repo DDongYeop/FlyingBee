@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public PlayerSO PlayerData;
 
     private PlayerMovement _playerMovement;
+    public PlayerAnimator PlayerAni;
 
     private int _score = 0;
     public int Score
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour
         _playerMovement = GetComponent<PlayerMovement>();
         InputManager.Instance.SwipeInput += PlayerInput;
 
+        PlayerAni = transform.GetChild(0).GetComponent<PlayerAnimator>();
         _inGameUI = FindObjectOfType<InGameUI>();
     }
 

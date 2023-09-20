@@ -20,9 +20,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void Movement(PlayerDirectionState dirState)
     {
-        if (_playerController.State == PlayerState.MOVE || !MoveCheck(dirState))
+        if (!MoveCheck(dirState))
+        {
+            _playerController.PlayerAni.IsMoving(false);
             return;
-
+        }
+        else if (_playerController.State == PlayerState.MOVE)
+            return;
+        
+        _playerController.PlayerAni.Movement(_moveDirs[(int)dirState]);
         StartCoroutine(MovementCo(dirState));
     }
 
