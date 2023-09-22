@@ -36,4 +36,11 @@ public class GameManager : MonoBehaviour
     {
         _saveData.Save();
     }
+
+
+    public int Level
+    {
+        get => SaveData.Level;
+        set => SaveData.Level = value;
+    }
 }
