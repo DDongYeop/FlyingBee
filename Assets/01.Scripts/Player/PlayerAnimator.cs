@@ -20,8 +20,7 @@ public class PlayerAnimator : MonoBehaviour
     {
         IsMoving(true);
         _animator.SetFloat(_moveX, pos.x);
-        if (pos.y != 0)
-            _animator.SetFloat(_moveY, pos.y);
+        _animator.SetFloat(_moveY, pos.y);
     }
 
     public void IsMoving(bool value)
