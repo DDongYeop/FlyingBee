@@ -7,7 +7,6 @@ public class Astar : MonoBehaviour
 {
     public Vector2Int StartPos, TargetPos, TopRight, BottomLeft; //TopRight와 BottomLeft는 나중에 수정. 
     public List<Node> FinalNodeLsit;
-    public bool allowDiagonal, dontCrossCorner;
     [SerializeField] private LayerMask _obstacleLayer;
 
     private int _sizeX, _sizeY;
@@ -34,8 +33,9 @@ public class Astar : MonoBehaviour
             }
         }
 
-        _startNode = _nodeArray[_startNode.X, _startNode.Y];
-        _targetNode = _nodeArray[_targetNode.X, _targetNode.Y];
+        //위치 정해주기
+        _startNode = _nodeArray[StartPos.x - BottomLeft.x, StartPos.y - BottomLeft.y];
+        _targetNode = _nodeArray[TargetPos.x - BottomLeft.x, TargetPos.y - BottomLeft.y];
 
         _openList = new List<Node>() { _startNode };
         _closedList = new List<Node>();
@@ -44,6 +44,8 @@ public class Astar : MonoBehaviour
 
     public List<Node> AstarLoop()
     {
+        //위치 정하는거 해야댐
+        
         while (_openList.Count > 0)
         {
             _currentNode = _openList[0];
