@@ -1,101 +1,93 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class Astar : MonoBehaviour
 {
-    public Vector2Int StartPos, TargetPos, TopRight, BottomLeft; //TopRight와 BottomLeft는 나중에 수정. 
-    public List<Node> FinalNodeLsit;
-    [SerializeField] private LayerMask _obstacleLayer;
+    public static Astar Instance;
 
-    private int _sizeX, _sizeY;
-    private Node[,] _nodeArray;
-    private Node _startNode, _targetNode, _currentNode;
-    private List<Node> _openList, _closedList;
-    private int[] _addX = { 1, -1, 0, 0 };
-    private int[] _addY = { 0, 0, 1, -1 };
-    private int cost = 10;
+    [SerializeField] private LayerMask _whatIsWall;
+    [SerializeField] private Vector2 _leftTop, _rightBottom;
+    private List<List<Node>> _map = new List<List<Node>>();
+    private List<List<int>> _visited = new List<List<int>>();
+    private List<Vector2Int> _road;
 
-    public void AstarInit()
+    private Vector2Int[] _addPos = { Vector2Int.right, Vector2Int.left, Vector2Int.up, Vector2Int.down };
+    
+    private void Awake()
     {
-        _sizeX = TopRight.x - BottomLeft.x + 1;
-        _sizeY = TopRight.y - BottomLeft.y + 1;
-        _nodeArray = new Node[_sizeX, _sizeY];
-
-        for (int i = 0; i < _sizeX; ++i)
-        {
-            for (int j = 0; j < _sizeY; ++j)
-            {
-                bool isWall = false;
-                if (Physics2D.OverlapCircle(new Vector2(i, j), 0.45f, _obstacleLayer)) //OverlapCircleNonAlloc로 바꿔주면 굿 
-                    isWall = true;
-            }
-        }
-
-        //위치 정해주기
-        _startNode = _nodeArray[StartPos.x - BottomLeft.x, StartPos.y - BottomLeft.y];
-        _targetNode = _nodeArray[TargetPos.x - BottomLeft.x, TargetPos.y - BottomLeft.y];
-
-        _openList = new List<Node>() { _startNode };
-        _closedList = new List<Node>();
-        FinalNodeLsit = new List<Node>();
+        if (Instance != null)
+            Debug.LogError("Multiple Astar is running");
+        Instance = this;
+        Init();
     }
 
-    public List<Node> AstarLoop()
+    private void Init()
     {
-        //위치 정하는거 해야댐
-        
-        while (_openList.Count > 0)
+        for (int j = (int)_leftTop.y; j >= 0; --j)
         {
-            _currentNode = _openList[0];
-            
-            foreach (var node in _openList) //priority queue가 있다면 교체하면 좋을듯. 
+            _map.Add(new List<Node>());
+            for (int i = 0; i <= _leftTop.x - _rightBottom.x; ++i)
             {
-                if (node.F <= _currentNode.F && node.H < _currentNode.H)
-                    _currentNode = node;
+                _map[j].Add(new Node(false, j, i));
+                if (Physics2D.BoxCast(new Vector2(j, i), new Vector2(0.4f, 0.4f), 0, Vector2.zero, 0, _whatIsWall))
+                    _map[j][i].IsWall = true; //수정
             }
+        }
+    }
 
-            _openList.Remove(_currentNode);
-            _closedList.Add(_currentNode);
+    public List<Vector2Int> AstarLoop(Vector2Int startPos, Vector2Int endPos)
+    {
+        _visited = new List<List<int>>();
+        for (int j = (int)_leftTop.y; j >= 0; --j)
+        {
+            _visited.Add(new List<int>());
+            for (int i = 0; i <= _leftTop.x - _rightBottom.x; ++i)
+                _visited[j].Add(0); //수정
+        }
+        
+        Queue<Vector2Int> queue = new Queue<Vector2Int>();
+        queue.Enqueue(endPos);
+        _visited[endPos.x][endPos.y] = 1;
 
-            if (_currentNode == _targetNode) //도착
-            {
-                Node targetCurrentNode = _targetNode;
-                while (targetCurrentNode != _startNode)
-                {
-                    FinalNodeLsit.Add(targetCurrentNode);
-                    targetCurrentNode = targetCurrentNode.ParentNode;
-                }
-                FinalNodeLsit.Add(_startNode);
-                FinalNodeLsit.Reverse();
-                
-                return FinalNodeLsit;
-            }
+        while (queue.Count != 0)
+        {
+            Vector2Int front = queue.Dequeue();
 
             for (int i = 0; i < 4; ++i)
-                OpenListAdd(_currentNode.X + _addX[i], _currentNode.Y + _addY[i]);
-        }
-
-        return null;
-    }
-
-    private void OpenListAdd(int checkX, int checkY)
-    {
-        if (checkX >= BottomLeft.x && checkX <= TopRight.x && checkY <= TopRight.y && checkY >= BottomLeft.y &&
-            !_nodeArray[checkX, checkY].IsWall && _closedList.Contains(_nodeArray[checkX, checkY]))
-        {
-            Node neighborNode = _nodeArray[checkX, checkY];
-            int moveCost = _currentNode.G + cost;
-
-            if (moveCost < neighborNode.G || !_openList.Contains(neighborNode))
             {
-                neighborNode.G = moveCost;
-                neighborNode.H = (Mathf.Abs(neighborNode.X - _targetNode.X) + Mathf.Abs(neighborNode.Y - _targetNode.Y)) * 10;
-                neighborNode.ParentNode = _currentNode;
+                Vector2Int current = front + _addPos[i];
+                if (current.x < 0 || current.y < 0 || current.x > _rightBottom.x || current.y > _rightBottom.y)
+                    continue;
+                if (_map[current.x][current.y].IsWall || _visited[current.x][current.y] != 0)
+                    continue;
+
+                _visited[current.x][current.y] = _visited[front.x][front.y] + 1;
                 
-                _openList.Add(neighborNode);
+                if (current == startPos)
+                    break;
             }
         }
+
+        _road.Add(startPos);
+        while (true)
+        {
+            Vector2Int pos = _road[_road.Count - 1];
+            int visitCnt = _visited[pos.x][pos.y];
+
+            for (int i = 0; i < 4; ++i)
+            {
+                Vector2Int addPosision = pos + _addPos[i];
+                if (_visited[addPosision.x][addPosision.y] == visitCnt - 1)
+                {
+                    _road.Add(addPosision);
+                    break;
+                }
+            }
+        }
+        
+        _road.Reverse();
+        return _road;
     }
 }

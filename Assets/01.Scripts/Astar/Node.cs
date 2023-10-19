@@ -3,6 +3,11 @@ using System;
 [Serializable]
 public class Node
 {
+    public Node()
+    {
+        
+    }
+
     public Node(bool isWall, int x, int y)
     {
         IsWall = isWall;
@@ -11,8 +16,6 @@ public class Node
     }
     
     public bool IsWall;
-    public Node ParentNode;
 
-    public int X, Y, G, H;
-    public int F { get { return G + H; } }
+    public int X, Y, G;
 }
