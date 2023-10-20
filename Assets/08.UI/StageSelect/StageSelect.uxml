@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/08.UI/StageSelect/StageSelect.uss?fileID=7433441132597879392&amp;guid=e2f59584781e0ef4f91c338202deed9d&amp;type=3#StageSelect" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/02.Sprites/UI/Back.png?fileID=21300000&amp;guid=683990a09cdc1ee418db75c37bd3615d&amp;type=3#Back&apos;); -unity-background-scale-mode: scale-and-crop; align-items: center; justify-content: space-between;">
+        <ui:VisualElement name="StageTxtField" style="height: 20%; width: 100%; align-items: center; justify-content: center;">
+            <ui:VisualElement name="StageTxtImage" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/02.Sprites/UI/NameField.png?fileID=21300000&amp;guid=7524eb51166574042aab3fbe1de1fd3a&amp;type=3#NameField&apos;); width: 65%; -unity-background-scale-mode: scale-to-fit; height: 65%; margin-top: 10%; align-items: center; justify-content: center;">
+                <ui:Label tabindex="-1" text="스테이지 1" display-tooltip-when-elided="true" name="StageTxt" style="font-size: 150%; -unity-font-definition: url(&apos;project://database/Assets/99.Others/Font/DNF_BitBit_v2_total/A_DNF_BitBit_v2/DNFBitBitv2%20SDF.asset?fileID=11400000&amp;guid=fea532d46d55d524e93bbf108b896114&amp;type=2#DNFBitBitv2 SDF&apos;); margin-bottom: 15%;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Buttons" style="background-color: rgba(0, 0, 0, 0); flex-grow: 0; width: 100%; height: 15%; flex-direction: row; align-items: center; justify-content: center;">
+            <ui:Button display-tooltip-when-elided="true" name="LeftArrow" class="ArraowButton" style="background-image: url(&apos;project://database/Assets/02.Sprites/UI/RightButton.png?fileID=21300000&amp;guid=ff583a8015698b14aaa2565d27fe9b30&amp;type=3#RightButton&apos;);" />
+            <ui:Button display-tooltip-when-elided="true" name="RightArrow" class="ArraowButton" style="background-image: url(&apos;project://database/Assets/02.Sprites/UI/LeftButton.png?fileID=21300000&amp;guid=f3a43b2a40c159b47aaf89bdb1bd2788&amp;type=3#LeftButton&apos;);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="Stage01" class="Stage">
+        <ui:Button display-tooltip-when-elided="true" name="Map" />
+        <ui:VisualElement name="Frame" picking-mode="Ignore" />
+    </ui:VisualElement>
+    <ui:VisualElement name="Stage02" class="Stage">
+        <ui:Button display-tooltip-when-elided="true" name="Map" />
+        <ui:VisualElement name="Frame" picking-mode="Ignore" />
+    </ui:VisualElement>
+</ui:UXML>

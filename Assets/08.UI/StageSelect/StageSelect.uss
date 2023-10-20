@@ -1,0 +1,59 @@
+.ArraowButton {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 25%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+.Stage {
+    left: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    -unity-background-scale-mode: scale-and-crop;
+    top: 17.5%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 65%;
+    position: absolute;
+}
+
+.Stage #Map {
+    width: 60%;
+    height: 67.5%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+.Stage #Frame {
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    background-image: url('project://database/Assets/02.Sprites/UI/Frame.png?fileID=21300000&guid=5dd4d30ec08dbb04596c83013411685e&type=3#Frame');
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.Stage.Show {
+    left: 0;
+}
