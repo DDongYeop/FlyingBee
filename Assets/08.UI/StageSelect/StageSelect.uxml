@@ -19,4 +19,8 @@
         <ui:Button display-tooltip-when-elided="true" name="Map" />
         <ui:VisualElement name="Frame" picking-mode="Ignore" />
     </ui:VisualElement>
+    <ui:VisualElement name="Stage03" class="Stage">
+        <ui:Button display-tooltip-when-elided="true" name="Map" />
+        <ui:VisualElement name="Frame" picking-mode="Ignore" />
+    </ui:VisualElement>
 </ui:UXML>

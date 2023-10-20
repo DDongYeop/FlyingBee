@@ -46,12 +46,11 @@ public class StageSelectUI : MonoBehaviour
     {
         _currentStage += value;
         _currentStage = Mathf.Clamp(_currentStage, 1, _maxStage);
-        print(_currentStage);
         
         _stage.RemoveFromClassList("Show");
         _stage = _rootVisual.Q<VisualElement>($"Stage0{_currentStage}");
         _stage.AddToClassList("Show");
-        _stageButton = _rootVisual.Q<Button>("Map");
+        _stageButton = _stage.Q<Button>("Map");
         _stageButton.RegisterCallback<ClickEvent>(e => SceneManager.LoadScene(_currentStage + 1));
         _stageLabel.text = $"스테이지{_currentStage}";
     }

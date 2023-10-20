@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class InputManager : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class InputManager : MonoBehaviour
     private float _swipeDistance;
     private Vector2 _startPos;
     private Vector2 _endPos;
+    public bool IsReverse;
 
     private void Awake()
     {
@@ -46,10 +48,6 @@ public class InputManager : MonoBehaviour
 
     private void Swipe()
     {
-        // 조작감 수정
-        // 터치 하면 그 위치 우선 잡아주고 계속 갱신해주면서 특정 거리 넘기면 그 방향으로 움직임. 
-        // 움직이고 나선 마지막 거기에 다 같은 위치 넣어주기. 
-        
         if (Input.touchCount <= 0)
             return;
         
@@ -76,6 +74,9 @@ public class InputManager : MonoBehaviour
 
     private void DirectionCheck(Vector2 dir)
     {
+        if (IsReverse)
+            dir *= -1;
+        
         if (dir == Vector2.up)
             SwipeInput?.Invoke(PlayerDirectionState.UP);
         else if (dir == Vector2.down)

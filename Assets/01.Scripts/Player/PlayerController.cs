@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public PlayerSO PlayerData;
 
     private PlayerMovement _playerMovement;
-    public PlayerAnimator PlayerAni;
+    [HideInInspector] public PlayerAnimator PlayerAni;
 
     private int _score = 0;
     public int Score
