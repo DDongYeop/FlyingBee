@@ -4,5 +4,5 @@ using UnityEngine;
 
 public enum ObstacleType 
 {
-    COIN = 0
+    COIN = 0,
 }
