@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/08.UI/ClearUI/ClearUI.uss?fileID=7433441132597879392&amp;guid=7a12ad34db642a44481b86ec5016be31&amp;type=3#ClearUI" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.59); align-items: center; justify-content: center;">
+        <ui:VisualElement name="VIsual" style="background-color: rgba(0, 0, 0, 0); width: 100%; height: 50%; align-items: center; justify-content: flex-start;">
+            <ui:VisualElement name="Image" style="background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/02.Sprites/UI/FailImage.png?fileID=21300000&amp;guid=938a749da0257c74c960be8a5b89f8c1&amp;type=3#FailImage&apos;); -unity-background-scale-mode: scale-to-fit; width: 75%; height: 75%;" />
+            <ui:VisualElement name="Txt" style="background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/02.Sprites/UI/FailTxt.png?fileID=21300000&amp;guid=1a39b065410308c4499901d31e093d4c&amp;type=3#FailTxt&apos;); width: 100%; height: 100%; position: absolute;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Buttons" style="background-color: rgba(0, 0, 0, 0); width: 100%; height: 25%; align-items: center; justify-content: center;">
+            <ui:Button text="다음&#10;스테이지" display-tooltip-when-elided="true" name="RePlay" enable-rich-text="true" class="Buttons" />
+            <ui:Button text="로비로&#10;돌아가기" display-tooltip-when-elided="true" name="Lobby" class="Buttons" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
