@@ -25,18 +25,12 @@ public class UIManager : MonoBehaviour
             UIActive(true, (int)UIType.GOBACK);
     }
 
-    public void UIActive(bool value, int index = -1)
+    public void UIActive(bool value, int index = -1) 
     {
-        if (value)
-        {
-            if (_isShow)
-                return;
-        }
-        else
-        {
-            if (_currentIndex == -1)
-                return;
-        }
+        if (value && _isShow)
+            return;
+        
+        _currentIndex = index;
         _uis[_currentIndex].SetActive(value);
         _isShow = value;
         _currentIndex = index;

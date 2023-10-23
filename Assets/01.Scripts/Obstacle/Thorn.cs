@@ -20,9 +20,7 @@ public class Thorn : MonoBehaviour
             return;
 
         if (_isShow)
-        {
-            // Player Die;
-        }
+            UIManager.Instance.UIActive(true, (int)UIType.FAIL);
     }
 
     private void OnTriggerExit2D(Collider2D other)

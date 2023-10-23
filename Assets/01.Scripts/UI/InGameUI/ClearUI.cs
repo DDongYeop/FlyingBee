@@ -22,7 +22,17 @@ public class ClearUI : MonoBehaviour
         _root = _uiDocument.rootVisualElement;
         _lobbyButton = _root.Q<Button>("Lobby");
         _lobbyButton.RegisterCallback<ClickEvent>(evt => SceneManager.LoadScene(1));
-        _rePlayButton = _root.Q<Button>("RePlay");
-        _rePlayButton.RegisterCallback<ClickEvent>(evt => SceneManager.LoadScene(SceneManager.GetActiveScene().name));
+        _rePlayButton = _root.Q<Button>("NextStage");
+        _rePlayButton.RegisterCallback<ClickEvent>(NextStage);
+    }
+    
+    private void NextStage(ClickEvent evt)
+    {
+        int currentStage = SceneManager.GetActiveScene().buildIndex;
+        if (Application.CanStreamedLevelBeLoaded(currentStage + 1))
+            ++currentStage;
+        else
+            currentStage = 2;
+        SceneManager.LoadScene(currentStage);
     }
 }

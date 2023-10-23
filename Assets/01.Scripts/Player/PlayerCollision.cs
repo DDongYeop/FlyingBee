@@ -26,6 +26,9 @@ public class PlayerCollision : MonoBehaviour
                 obstacle.OnCollision?.Invoke();
                 Destroy(other.gameObject, 2f);
                 break;
+            case ObstacleType.ENDPOS:
+                UIManager.Instance.UIActive(true, (int)UIType.CLEAR);
+                break;
         }
     }
 }
