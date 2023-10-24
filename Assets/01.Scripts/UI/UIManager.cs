@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
 
     [SerializeField] private List<GameObject> _uis;
+    [SerializeField] private GameObject _typhoonUI;
 
     private bool _isShow = false;
     private int _currentIndex = -1; 
@@ -34,5 +35,10 @@ public class UIManager : MonoBehaviour
         _uis[_currentIndex].SetActive(value);
         _isShow = value;
         _currentIndex = index;
+    }
+
+    public void TyhoonWarning()
+    {
+        _typhoonUI.SetActive(true);
     }
 }

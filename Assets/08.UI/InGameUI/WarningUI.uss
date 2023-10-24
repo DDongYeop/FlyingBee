@@ -1,0 +1,10 @@
+.label {
+    -unity-font-definition: url('project://database/Assets/99.Others/Font/DNF_BitBit_v2_total/A_DNF_BitBit_v2/DNFBitBitv2%20SDF.asset?fileID=11400000&guid=fea532d46d55d524e93bbf108b896114&type=2#DNFBitBitv2 SDF');
+    font-size: 2000%;
+    color: rgba(0, 0, 0, 0);
+    transition-duration: 0.2s;
+}
+
+.label.show {
+    color: rgb(0, 0, 0);
+}

@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/08.UI/InGameUI/WarningUI.uss?fileID=7433441132597879392&amp;guid=31b1d9867c8c3704cbe6451cee920b7e&amp;type=3#WarningUI" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: center; justify-content: center;">
+        <ui:VisualElement name="WarningBox" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/02.Sprites/UI/Warning%20Box.png?fileID=21300000&amp;guid=a8cb96b3b1b04ee4aaad0e36a4cfc553&amp;type=3#Warning Box&apos;); width: 90%; -unity-background-scale-mode: scale-to-fit; justify-content: space-between; align-items: center; flex-direction: row;">
+            <ui:Label tabindex="-1" text=" ! 태풍" display-tooltip-when-elided="true" name="LeftLabel" class="label" />
+            <ui:Label tabindex="-1" text="경고 ! " display-tooltip-when-elided="true" name="RightLabel" class="label" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

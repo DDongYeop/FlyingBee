@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     private PlayerMovement _playerMovement;
     [HideInInspector] public PlayerAnimator PlayerAni;
+    [SerializeField] private Transform _typhoonPos;
 
     private int _score = 0;
     public int Score
@@ -34,6 +35,12 @@ public class PlayerController : MonoBehaviour
 
         PlayerAni = transform.GetChild(0).GetComponent<PlayerAnimator>();
         _inGameUI = FindObjectOfType<InGameUI>();
+    }
+
+    private void Update()
+    {
+        if (_typhoonPos.position.y < transform.position.y)
+            NaturalDisasterManager.Instance.Typhoon();
     }
 
     private void PlayerInput(PlayerDirectionState dirState)
