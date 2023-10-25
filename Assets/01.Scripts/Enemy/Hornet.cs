@@ -10,13 +10,17 @@ public class Hornet : MonoBehaviour
     private Transform _playerTrm;
 
     private SpriteRenderer _spriteRenderer;
+    private Collider2D _collider2D; 
     private float _currentTime = 0;
 
     private IEnumerator Start()
     {
         _playerTrm = FindObjectOfType<PlayerMovement>().transform;
-        //_spriteRenderer
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _collider2D = GetComponent<Collider2D>();
         yield return new WaitForSeconds(10f);
+        _spriteRenderer.enabled = true;
+        _collider2D.enabled = true;
         StartCoroutine(MovementCo());
     }
 

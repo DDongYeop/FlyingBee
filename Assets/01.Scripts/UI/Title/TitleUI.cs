@@ -20,6 +20,13 @@ public class TitleUI : MonoBehaviour
     {
         _rootVisual = _uiDocument.rootVisualElement;
         _startButton = _rootVisual.Q<Button>("StartButton");
-        _startButton.RegisterCallback<ClickEvent>(e => SceneManager.LoadScene(1));
+        _startButton.RegisterCallback<ClickEvent>(e => StartCoroutine(TitleMoveCo()));
+    }
+
+    private IEnumerator TitleMoveCo()
+    {
+        _startButton.AddToClassList("click");
+        yield return new WaitForSeconds(0.45f);
+        SceneManager.LoadScene(1);
     }
 }

@@ -1,0 +1,26 @@
+.button {
+    width: 75%;
+    height: 50%;
+    background-image: url('project://database/Assets/02.Sprites/UI/Logo.png?fileID=21300000&guid=31cba032147cf9347839d5c7ed9610e3&type=3#Logo');
+    background-color: rgba(188, 188, 188, 0);
+    -unity-background-scale-mode: scale-to-fit;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    bottom: 0;
+    transition-duration: 0.75s;
+    transition-timing-function: ease-out-cubic;
+}
+
+.button.click {
+    bottom: 100%;
+}
