@@ -1,8 +1,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement name="Container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: auto; align-self: flex-start;">
         <ui:VisualElement name="Score" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); flex-direction: row; justify-content: flex-start;">
-            <ui:VisualElement name="CoinIcon" style="background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/02.Sprites/CoinUI.png?fileID=762347900&amp;guid=d05d4c4b0e10afd42a04d348d6f1021a&amp;type=3#CoinUI_0&apos;); width: 200px; height: 200px;" />
-            <ui:Label tabindex="-1" text="0" display-tooltip-when-elided="true" name="ScoreTxt" style="font-size: 125px; -unity-font-definition: url(&apos;project://database/Assets/99.Others/Font/DNF_BitBit_v2_total/A_DNF_BitBit_v2/DNFBitBitv2%20SDF.asset?fileID=11400000&amp;guid=fea532d46d55d524e93bbf108b896114&amp;type=2#DNFBitBitv2 SDF&apos;); -unity-text-outline-color: rgb(255, 255, 255); -unity-text-outline-width: 2px;" />
+            <ui:VisualElement name="CoinIcon" style="background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/02.Sprites/CoinUI.png?fileID=762347900&amp;guid=d05d4c4b0e10afd42a04d348d6f1021a&amp;type=3#CoinUI_0&apos;); width: 400px; height: 400px;" />
+            <ui:Label tabindex="-1" text="0" display-tooltip-when-elided="true" name="ScoreTxt" style="font-size: 250px; -unity-font-definition: url(&apos;project://database/Assets/99.Others/Font/DNF_BitBit_v2_total/A_DNF_BitBit_v2/DNFBitBitv2%20SDF.asset?fileID=11400000&amp;guid=fea532d46d55d524e93bbf108b896114&amp;type=2#DNFBitBitv2 SDF&apos;); -unity-text-outline-color: rgb(255, 255, 255); -unity-text-outline-width: 2px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

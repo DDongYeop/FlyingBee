@@ -32,6 +32,11 @@ public class Hornet : MonoBehaviour
             List<Vector2Int> moveRoad = Astar.Instance.AstarLoop(new Vector2Int((int)transform.position.x,(int)transform.position.y), new Vector2Int((int)_playerTrm.position.x,(int)_playerTrm.position.y));
             if (moveRoad.Count < 2)
                 continue;
+            else if (moveRoad.Count < 3)
+            {
+                UIManager.Instance.UIActive(true, (int)UIType.FAIL);
+                break;
+            }
             
             _currentTime = 0;
             transform.position = (Vector2)moveRoad[0];

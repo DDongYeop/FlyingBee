@@ -18,12 +18,14 @@ public class StageSelectUI : MonoBehaviour
     private Button _leftButton;
     private Button _rightButton;
 
+    private AudioSource _audioSource;
     [SerializeField] private int _maxStage;
     private int _currentStage = 1;
 
     private void Awake()
     {
         _uiDocument = GetComponent<UIDocument>();
+        _audioSource = GetComponent<AudioSource>();
         
         if (!PlayerPrefs.HasKey("Stage"))
             PlayerPrefs.SetInt("Stage", 1);
@@ -50,6 +52,7 @@ public class StageSelectUI : MonoBehaviour
 
     private void UIMovement(int value) // left, right, unShow << 얘네 넣어주고 뺴고 해야댐 
     {
+        _audioSource.Play();
         _currentStage += value;
         if (_currentStage <= 0 || _currentStage > _maxStage)
         {
@@ -79,6 +82,7 @@ public class StageSelectUI : MonoBehaviour
 
     private IEnumerator ButtonClick()
     {
+        _audioSource.Play();
         _stage.AddToClassList("unShow");
         _buttons.AddToClassList("unshow");
         _stageTextField.AddToClassList("unshow");

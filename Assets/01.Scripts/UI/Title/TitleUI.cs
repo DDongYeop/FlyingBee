@@ -10,10 +10,12 @@ public class TitleUI : MonoBehaviour
     private UIDocument _uiDocument;
     private VisualElement _rootVisual;
     private Button _startButton;
+    private AudioSource _audioSource;
 
     private void Awake()
     {
         _uiDocument = GetComponent<UIDocument>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -25,6 +27,7 @@ public class TitleUI : MonoBehaviour
 
     private IEnumerator TitleMoveCo()
     {
+        _audioSource.Play();
         _startButton.AddToClassList("click");
         yield return new WaitForSeconds(0.45f);
         SceneManager.LoadScene(1);
