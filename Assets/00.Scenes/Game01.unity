@@ -464,6 +464,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5011728158066053919, guid: f64da1eeeb800b147a044af9df09be20, type: 3}
   m_PrefabInstance: {fileID: 49169879}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &50697789 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6242261266853388532, guid: 0305ed899a3d1fe4cb7c6bb4c7ae5a81, type: 3}
+  m_PrefabInstance: {fileID: 4632924494847592955}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &57050623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -99733,6 +99738,134 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5011728158066053919, guid: f64da1eeeb800b147a044af9df09be20, type: 3}
   m_PrefabInstance: {fileID: 1953522888}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1956887210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1956887211}
+  - component: {fileID: 1956887212}
+  m_Layer: 0
+  m_Name: TyphoonSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1956887211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956887210}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 50697789}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1956887212
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956887210}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1dc37806103122f429a59833d1370c73, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1965966720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101390,22 +101523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Virtual Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 4548293809389638996, guid: c7477745bda68f144b2883e28e4b4bf0, type: 3}
-      propertyPath: m_DeadZoneWidth
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4548293809389638996, guid: c7477745bda68f144b2883e28e4b4bf0, type: 3}
-      propertyPath: m_SoftZoneWidth
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7848300958871156557, guid: c7477745bda68f144b2883e28e4b4bf0, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1812932267}
-    - target: {fileID: 7848300958871156557, guid: c7477745bda68f144b2883e28e4b4bf0, type: 3}
-      propertyPath: m_Lens.OrthographicSize
-      value: 9
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -101468,12 +101589,19 @@ PrefabInstance:
       value: Managers
       objectReference: {fileID: 0}
     - target: {fileID: 5717518373803734026, guid: 0305ed899a3d1fe4cb7c6bb4c7ae5a81, type: 3}
+      propertyPath: _typhoonSound
+      value: 
+      objectReference: {fileID: 1956887212}
+    - target: {fileID: 5717518373803734026, guid: 0305ed899a3d1fe4cb7c6bb4c7ae5a81, type: 3}
       propertyPath: _cinemachineVirtualCamera
       value: 
       objectReference: {fileID: 18465780}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6242261266853388532, guid: 0305ed899a3d1fe4cb7c6bb4c7ae5a81, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1956887211}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0305ed899a3d1fe4cb7c6bb4c7ae5a81, type: 3}
 --- !u!1001 &7355558244639049193

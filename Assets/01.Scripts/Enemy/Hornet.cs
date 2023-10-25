@@ -8,13 +8,15 @@ public class Hornet : MonoBehaviour
 {
     [SerializeField] private float _moveTime;
     private Transform _playerTrm;
-    
+
+    private SpriteRenderer _spriteRenderer;
     private float _currentTime = 0;
 
-    private void OnEnable()
+    private IEnumerator Start()
     {
         _playerTrm = FindObjectOfType<PlayerMovement>().transform;
-        StopAllCoroutines();
+        //_spriteRenderer
+        yield return new WaitForSeconds(10f);
         StartCoroutine(MovementCo());
     }
 

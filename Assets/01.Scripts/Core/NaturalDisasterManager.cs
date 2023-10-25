@@ -11,6 +11,9 @@ public class NaturalDisasterManager : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera _cinemachineVirtualCamera;
     [SerializeField] private float _rotationTime = 0.5f;
 
+    [Header("Sound")] 
+    [SerializeField] private AudioSource _typhoonSound;
+
     private bool _isTyphoon = false;
     private int _cameraDutch = 0;
     
@@ -34,6 +37,8 @@ public class NaturalDisasterManager : MonoBehaviour
     private IEnumerator TyphoonCo()
     {
         UIManager.Instance.TyhoonWarning();
+        CameraManager.Instance.CameraShake(25,2.25f);
+        _typhoonSound.Play();
         
         yield return new WaitForSeconds(1.2f);
 
@@ -51,7 +56,8 @@ public class NaturalDisasterManager : MonoBehaviour
         }
         
         InputManager.Instance.IsReverse = !InputManager.Instance.IsReverse;
-        yield return null;
+        yield return new WaitForSeconds(0.75f);
+        _typhoonSound.Stop();
     }
     
     

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9def0c7245971814ab14d28daa47df03
+guid: c81ec879c727c7d4e882468d49fcf758
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -124,7 +124,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BeeIdle_0
+      name: BeeMovement_0
       rect:
         serializedVersion: 2
         x: 9
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8949505d58c980543a6caf4d3b4e4f8f
-      internalID: 1016321089
+      spriteID: db25df4a9bea577408f68f4628f3191b
+      internalID: 290637218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_1
+      name: BeeMovement_1
       rect:
         serializedVersion: 2
         x: 25
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cbaa0a6ded9b2d4390801872028f4fc
-      internalID: -68088171
+      spriteID: 055ddea005c508b40ad93e2df2c8ce92
+      internalID: -839149489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_2
+      name: BeeMovement_2
       rect:
         serializedVersion: 2
         x: 41
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd51342d74e4a1a4cbb65eb403433f93
-      internalID: -831980476
+      spriteID: 3c7106e10a12d8042afa08c2c50a662e
+      internalID: 1307672377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_3
+      name: BeeMovement_3
       rect:
         serializedVersion: 2
         x: 57
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef7c0f29919b6774796acf5e9d92f46b
-      internalID: 1261351501
+      spriteID: 97ed1dcd43ff1de4bac0897cfd129bf9
+      internalID: 1099684129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_4
+      name: BeeMovement_4
       rect:
         serializedVersion: 2
         x: 73
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12d5662298e8daf4c880161422f27ea6
-      internalID: 1855902170
+      spriteID: 39ea3f710f7f47f4d8955d6d57b089bf
+      internalID: -500596437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_5
+      name: BeeMovement_5
       rect:
         serializedVersion: 2
         x: 89
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8498c6fafca786249a80211dbfa9debd
-      internalID: 1211301393
+      spriteID: bba521e2a1fb8344fafa5574ca82b9f9
+      internalID: -1598831462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_6
+      name: BeeMovement_6
       rect:
         serializedVersion: 2
         x: 105
@@ -276,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f6af594a2d8bf84b8d30d2527c125d7
-      internalID: -911191305
+      spriteID: d4b6246aa8cc61a4cb36e9e7addc059e
+      internalID: -1372830939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_7
+      name: BeeMovement_7
       rect:
         serializedVersion: 2
         x: 9
@@ -297,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9a4e5aaf5c32a649a00598897035d42
-      internalID: 917831621
+      spriteID: 8562d1887bcf8234697e813e4d806173
+      internalID: 1409823685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_8
+      name: BeeMovement_8
       rect:
         serializedVersion: 2
         x: 25
@@ -318,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6a7d86e4fef85e44b613ab9e8f96091
-      internalID: 2143487837
+      spriteID: 89594f1c0e9cb604d94569237c4b7033
+      internalID: 2021873894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_9
+      name: BeeMovement_9
       rect:
         serializedVersion: 2
         x: 41
@@ -339,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b514685df12d20d4bbd4d54d923929d1
-      internalID: 1392087510
+      spriteID: 2799ece49778a6c4d8b07f102feda4e9
+      internalID: -709938528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_10
+      name: BeeMovement_10
       rect:
         serializedVersion: 2
         x: 57
@@ -360,14 +360,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0046174710d47d94eb199b1092e10c8c
-      internalID: 1947100222
+      spriteID: 2d96f6b38b666a14686377a120e55302
+      internalID: -1289414018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_11
+      name: BeeMovement_11
       rect:
         serializedVersion: 2
         x: 73
@@ -381,14 +381,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60a9ee5fd395d9f42aa01d1d0b24d6c7
-      internalID: -338080959
+      spriteID: ed7fb0bc64bc6064b83ac2bdbd8f5981
+      internalID: -1954447788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_12
+      name: BeeMovement_12
       rect:
         serializedVersion: 2
         x: 89
@@ -402,14 +402,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6ac829df81bcad4dbd7711daacdaf1c
-      internalID: 1819285262
+      spriteID: 089e3b17352c0bf4d89a99b770be9e8a
+      internalID: 1415654005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_13
+      name: BeeMovement_13
       rect:
         serializedVersion: 2
         x: 105
@@ -423,14 +423,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca13399d4366d9e478717823d06aca65
-      internalID: -2144267730
+      spriteID: a8f1f65df3327884380ce2c2a0cce6d5
+      internalID: 2023933016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_14
+      name: BeeMovement_14
       rect:
         serializedVersion: 2
         x: 9
@@ -444,14 +444,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28878080fb32433478ffa5204db894f3
-      internalID: 495315834
+      spriteID: 9c5e15a5d7982f944bd01427c228aef4
+      internalID: 1596011968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_15
+      name: BeeMovement_15
       rect:
         serializedVersion: 2
         x: 25
@@ -465,14 +465,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c4c8f88e26e78843891479931ce2cf0
-      internalID: -1668454918
+      spriteID: 4047982a24498424488e4bb75d4c562e
+      internalID: -1188108825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_16
+      name: BeeMovement_16
       rect:
         serializedVersion: 2
         x: 41
@@ -486,14 +486,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0f86ca98de9249448aa92f139e3df02
-      internalID: -10225908
+      spriteID: 1f0e613d3413a4e4b8ea5d564d46da41
+      internalID: 952706269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_17
+      name: BeeMovement_17
       rect:
         serializedVersion: 2
         x: 57
@@ -507,14 +507,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e2efa61510c8644f864137b6ff7abdc
-      internalID: 2105426677
+      spriteID: a293cd4899a08b545afd0b6cf074926c
+      internalID: 148365981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_18
+      name: BeeMovement_18
       rect:
         serializedVersion: 2
         x: 73
@@ -528,14 +528,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 579f12dbc9198854bae643a38f346e5d
-      internalID: -489650366
+      spriteID: d1f11c7545d009649b69fd605a883ac0
+      internalID: -1110770539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_19
+      name: BeeMovement_19
       rect:
         serializedVersion: 2
         x: 89
@@ -549,14 +549,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f33679c9725c79a47af8b17d3b43e274
-      internalID: 617568244
+      spriteID: c13486e332655e145a182b14d6cfe7e9
+      internalID: -722820733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_20
+      name: BeeMovement_20
       rect:
         serializedVersion: 2
         x: 105
@@ -570,14 +570,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29f5a4c95d5ec5d4b8ba837559046fd2
-      internalID: -58600243
+      spriteID: 042bca0d88adc02469d3c4c11e60cb1f
+      internalID: 1386427463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_21
+      name: BeeMovement_21
       rect:
         serializedVersion: 2
         x: 9
@@ -591,14 +591,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae9bc0099a853ce4ab2e3796241b7776
-      internalID: -1326815821
+      spriteID: cf895dc1ba61bc1418d2312a47878776
+      internalID: -1298521210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_22
+      name: BeeMovement_22
       rect:
         serializedVersion: 2
         x: 25
@@ -612,14 +612,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 617354468499855408b56aaff89d99b6
-      internalID: -1423262775
+      spriteID: 16934790bbb20f245ade04b3e6bfafce
+      internalID: 1776125905
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_23
+      name: BeeMovement_23
       rect:
         serializedVersion: 2
         x: 41
@@ -633,14 +633,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60a88974ab026dd49a02736851d64d61
-      internalID: 625631228
+      spriteID: 0f76d58097fd70842a8aa5ccf6f01db2
+      internalID: 1195954244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_24
+      name: BeeMovement_24
       rect:
         serializedVersion: 2
         x: 57
@@ -654,14 +654,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a82a2b182d883d4ebf97f9572e98037
-      internalID: 16249682
+      spriteID: 137795911ddb1bd47afad239afa1b79e
+      internalID: -1167145307
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_25
+      name: BeeMovement_25
       rect:
         serializedVersion: 2
         x: 73
@@ -675,14 +675,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c681fa224253e3e48a599d3053c07bb3
-      internalID: 462141861
+      spriteID: 1c1b636ae4a80f148a8db21de8f5a048
+      internalID: -2039866675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_26
+      name: BeeMovement_26
       rect:
         serializedVersion: 2
         x: 89
@@ -696,14 +696,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da16401f8c4de564cacc7fa1c95e9ff9
-      internalID: 508909361
+      spriteID: 7d24e7270474c5d498a7792a0fe972cb
+      internalID: -1399477218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeeIdle_27
+      name: BeeMovement_27
       rect:
         serializedVersion: 2
         x: 105
@@ -717,8 +717,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91eca73d93299b047902ecfc1bed0974
-      internalID: 980953006
+      spriteID: 744e08bf6bd197a4986d46eb90ba8f3a
+      internalID: -429623863
       vertices: []
       indices: 
       edges: []
@@ -734,34 +734,34 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BeeIdle_0: 1016321089
-      BeeIdle_1: -68088171
-      BeeIdle_10: 1947100222
-      BeeIdle_11: -338080959
-      BeeIdle_12: 1819285262
-      BeeIdle_13: -2144267730
-      BeeIdle_14: 495315834
-      BeeIdle_15: -1668454918
-      BeeIdle_16: -10225908
-      BeeIdle_17: 2105426677
-      BeeIdle_18: -489650366
-      BeeIdle_19: 617568244
-      BeeIdle_2: -831980476
-      BeeIdle_20: -58600243
-      BeeIdle_21: -1326815821
-      BeeIdle_22: -1423262775
-      BeeIdle_23: 625631228
-      BeeIdle_24: 16249682
-      BeeIdle_25: 462141861
-      BeeIdle_26: 508909361
-      BeeIdle_27: 980953006
-      BeeIdle_3: 1261351501
-      BeeIdle_4: 1855902170
-      BeeIdle_5: 1211301393
-      BeeIdle_6: -911191305
-      BeeIdle_7: 917831621
-      BeeIdle_8: 2143487837
-      BeeIdle_9: 1392087510
+      BeeMovement_0: 290637218
+      BeeMovement_1: -839149489
+      BeeMovement_10: -1289414018
+      BeeMovement_11: -1954447788
+      BeeMovement_12: 1415654005
+      BeeMovement_13: 2023933016
+      BeeMovement_14: 1596011968
+      BeeMovement_15: -1188108825
+      BeeMovement_16: 952706269
+      BeeMovement_17: 148365981
+      BeeMovement_18: -1110770539
+      BeeMovement_19: -722820733
+      BeeMovement_2: 1307672377
+      BeeMovement_20: 1386427463
+      BeeMovement_21: -1298521210
+      BeeMovement_22: 1776125905
+      BeeMovement_23: 1195954244
+      BeeMovement_24: -1167145307
+      BeeMovement_25: -2039866675
+      BeeMovement_26: -1399477218
+      BeeMovement_27: -429623863
+      BeeMovement_3: 1099684129
+      BeeMovement_4: -500596437
+      BeeMovement_5: -1598831462
+      BeeMovement_6: -1372830939
+      BeeMovement_7: 1409823685
+      BeeMovement_8: 2021873894
+      BeeMovement_9: -709938528
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
